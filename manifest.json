@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Переопределение стилей для helpdeskeddy.com",
+  "version": "1.0",
+    "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "description": "Расширение для переопределения стилей на сайте yclients.helpdeskeddy.com",
+  "permissions": ["https://yclients.helpdeskeddy.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://yclients.helpdeskeddy.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["hde_dark.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
